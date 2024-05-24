@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import API from '../api/axios'; // Modifiez le chemin selon votre structure
+import API from '../api/axios';
 import { Container, Typography, Table, TableBody, TableCell, TableHead, TableRow, Button } from '@mui/material';
 
 const UserManagement = () => {

@@ -12,7 +12,7 @@ API.interceptors.request.use(
   config => {
     const token = Cookies.get('userToken');
     if (token) {
-      config.headers['Authorization'] = `Bearer ${token}`;
+      config.headers.Authorization = `Bearer ${token}`;
     }
     return config;
   },
