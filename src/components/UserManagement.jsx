@@ -27,11 +27,9 @@ const UserManagement = () => {
       .then(response => {
         const sortedUsers = response.data.sort((a, b) => b.wantToBeKeeper - a.wantToBeKeeper);
         setUsers(sortedUsers);
-        console.log("response.data", response);
         setLoading(false);
       })
-      .catch(error => {
-        console.error("Failed to fetch users:", error);
+      .catch(() => {
         setLoading(false);
       });
   }, []);

@@ -14,11 +14,9 @@ export const AuthProvider = ({ children }) => {
     if (token) {
       API.post('/verify_admin_token', { token })
         .then(response => {
-          console.log('Token verified, user:', response.data.user);
           setUser(response.data.user);
         })
-        .catch(error => {
-          console.error("Token verification failed:", error);
+        .catch(() => {
           setUser(null);
         })
         .finally(() => {

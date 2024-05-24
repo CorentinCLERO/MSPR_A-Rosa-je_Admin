@@ -6,8 +6,6 @@ import { AuthContext } from '../context/AuthContext.jsx';
 const PrivateRoute = ({ children }) => {
   const { user, loading } = useContext(AuthContext);
   const navigate = useNavigate();
-  console.log("user",user);
-  console.log("loading",loading);
 
   useEffect(() => {
     if (!loading) {
